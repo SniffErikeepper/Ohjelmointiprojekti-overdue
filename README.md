@@ -1,6 +1,7 @@
 # Ohjelmointiprojekti-overdue
 
 Tein taulun näillä komennoilla:
+
 USE netdb;
 
 CREATE TABLE car(
