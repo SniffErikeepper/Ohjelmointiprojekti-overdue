@@ -28,16 +28,17 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *update_list;
-    QPushButton *delete_2;
+    QPushButton *del;
     QPushButton *update;
     QPushButton *add;
-    QPlainTextEdit *plainTextEdit;
+    QPlainTextEdit *list;
     QSpinBox *idCar;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *brand;
+    QLineEdit *model;
     QLabel *label;
     QLabel *label_2;
     QLabel *id;
+    QPushButton *getid;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,27 +52,27 @@ public:
         update_list = new QPushButton(centralwidget);
         update_list->setObjectName(QString::fromUtf8("update_list"));
         update_list->setGeometry(QRect(320, 140, 91, 61));
-        delete_2 = new QPushButton(centralwidget);
-        delete_2->setObjectName(QString::fromUtf8("delete_2"));
-        delete_2->setGeometry(QRect(220, 140, 91, 61));
+        del = new QPushButton(centralwidget);
+        del->setObjectName(QString::fromUtf8("del"));
+        del->setGeometry(QRect(220, 140, 91, 61));
         update = new QPushButton(centralwidget);
         update->setObjectName(QString::fromUtf8("update"));
         update->setGeometry(QRect(120, 140, 91, 61));
         add = new QPushButton(centralwidget);
         add->setObjectName(QString::fromUtf8("add"));
         add->setGeometry(QRect(20, 140, 91, 61));
-        plainTextEdit = new QPlainTextEdit(centralwidget);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(20, 210, 391, 211));
+        list = new QPlainTextEdit(centralwidget);
+        list->setObjectName(QString::fromUtf8("list"));
+        list->setGeometry(QRect(20, 210, 391, 211));
         idCar = new QSpinBox(centralwidget);
         idCar->setObjectName(QString::fromUtf8("idCar"));
-        idCar->setGeometry(QRect(20, 90, 51, 31));
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(120, 90, 121, 31));
-        lineEdit_2 = new QLineEdit(centralwidget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(280, 90, 131, 31));
+        idCar->setGeometry(QRect(120, 30, 51, 31));
+        brand = new QLineEdit(centralwidget);
+        brand->setObjectName(QString::fromUtf8("brand"));
+        brand->setGeometry(QRect(120, 90, 121, 31));
+        model = new QLineEdit(centralwidget);
+        model->setObjectName(QString::fromUtf8("model"));
+        model->setGeometry(QRect(280, 90, 131, 31));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(280, 65, 61, 21));
@@ -84,8 +85,11 @@ public:
         label_2->setFont(font);
         id = new QLabel(centralwidget);
         id->setObjectName(QString::fromUtf8("id"));
-        id->setGeometry(QRect(20, 70, 49, 16));
+        id->setGeometry(QRect(120, 10, 49, 16));
         id->setFont(font);
+        getid = new QPushButton(centralwidget);
+        getid->setObjectName(QString::fromUtf8("getid"));
+        getid->setGeometry(QRect(20, 70, 91, 61));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -104,12 +108,13 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         update_list->setText(QCoreApplication::translate("MainWindow", "P\303\244ivit\303\244 lista", nullptr));
-        delete_2->setText(QCoreApplication::translate("MainWindow", "Poista", nullptr));
+        del->setText(QCoreApplication::translate("MainWindow", "Poista", nullptr));
         update->setText(QCoreApplication::translate("MainWindow", "P\303\244ivit\303\244 tietue", nullptr));
         add->setText(QCoreApplication::translate("MainWindow", "Lis\303\244\303\244 tietue", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Malli:", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Merkki:", nullptr));
         id->setText(QCoreApplication::translate("MainWindow", "ID:", nullptr));
+        getid->setText(QCoreApplication::translate("MainWindow", "Hae ID:ll\303\244", nullptr));
     } // retranslateUi
 
 };
